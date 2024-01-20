@@ -1,6 +1,22 @@
 # PowerBI
 
 
+<h3>Write DAX formulas</h3>
+
+Template to create a model calculation:
+
+```
+<Calculation name> = <DAX formula>
+```
+
+For example, the definition of the Ship Date calculated table that duplicates the Date table data is:
+```
+Ship Date = 'Date'
+```
+
+
+------------------------------------------------------------------------------------------------------
+
 #Exercise: Adding a calculated table and column
 
 #Step 1: Download and Load Data
@@ -55,12 +71,5 @@ To create a new column, select the Product table from the Data pane on the right
 
 ```
 Product Color = RELATED ( Products[Color] )
-```
-
-
-Template to create a model calculation:
-
-```
-<Calculation name> = <DAX formula>
 ```
 
