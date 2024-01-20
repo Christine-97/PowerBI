@@ -54,6 +54,15 @@ Disambiguated column is known as a fully qualified column. Some DAX functions re
 Revenue = SUM(Sales[Sales Amount])
 ```
 
+
+<h3>Measure references</h3>
+
+When you reference a measure in a formula, like column name references, the measure name must be enclosed within square brackets.
+
+```
+Profit = [Revenue] - [Cost]
+```
+
 ------------------------------------------------------------------------------------------------------
 
 #Exercise: Adding a calculated table and column
