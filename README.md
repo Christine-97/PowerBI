@@ -56,3 +56,11 @@ To create a new column, select the Product table from the Data pane on the right
 ```
 Product Color = RELATED ( Products[Color] )
 ```
+
+
+Template to create a model calculation:
+
+```
+<Calculation name> = <DAX formula>
+```
+
