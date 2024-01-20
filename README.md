@@ -162,7 +162,7 @@ DIVIDE(
 
 &#9733; DIVIDE(..., ...): The DIVIDE function is used to calculate the percentage change. It takes two arguments: the numerator (the difference between current and previous revenue) and the denominator (the revenue for the previous year).
 </ul>
-Final Result: The formula calculates the percentage change in revenue from the previous year to the current year.</b>
+Final Result: The formula calculates the percentage change in revenue from the previous year to the current year.</b><br>
 
 
 
