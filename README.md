@@ -24,7 +24,7 @@ DAX functions </li>
 <li>DAX variables</li>
 <li>Whitespace</li>
 </ul>
-
+</br>
 
 
 ```
@@ -60,13 +60,13 @@ Revenue = SUM(Sales[Sales Amount])
 When you reference a measure in a formula, like column name references, the measure name must be enclosed within square brackets.
 
 ```
-Same table column reference:
+* Same table column reference:
 
 Profit = [Revenue] - [Cost]
 
 ______________________________________________________________________
 
-Different table column reference:
+* Different table column reference:
 
 AverageSalesPerCustomer = 
     DIVIDE(
@@ -84,19 +84,13 @@ AverageSalesPerCustomer =
 
 Here's a breakdown of the key points:
 
-1. Measures and Tables:
-
-Measures are mentioned as "model-level objects," indicating that they are part of the overall data model or analytical framework.
+1. Measures and Tables:   Measures are mentioned as "model-level objects," indicating that they are part of the overall data model or analytical framework.
 While measures are assigned to a specific home table for organizational purposes, this assignment is described as a "cosmetic relationship." In other words, it's primarily for organizational or visual purposes in tools like the Fields pane.
 
 
-2. Column References with Table Names:
+2. Column References with Table Names:  The statement recommends that when referencing a column, it's a good practice to precede the column reference with its table name. This is common in data modeling to avoid ambiguity when there are columns with the same name in different tables. For example: TableName.ColumnName.
 
-The statement recommends that when referencing a column, it's a good practice to precede the column reference with its table name. This is common in data modeling to avoid ambiguity when there are columns with the same name in different tables. For example: TableName.ColumnName.
-
-3. Measures References without Table Names:
-
-In contrast, the statement advises against preceding a measure reference with its table name. Unlike columns, measures are model-level objects, and the guidance suggests that it's unnecessary or not recommended to include the table name when referencing a measure. For example: MeasureName rather than TableName.MeasureName.
+3. Measures References without Table Names:  In contrast, the statement advises against preceding a measure reference with its table name. Unlike columns, measures are model-level objects, and the guidance suggests that it's unnecessary or not recommended to include the table name when referencing a measure. For example: MeasureName rather than TableName.MeasureName.
 
 
 
@@ -133,7 +127,7 @@ Whitespace refers to characters that you can use to format your formulas in a wa
 4. Err on the side of too much whitespace than too little.
 
 ```
-
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 <h4>Revenue YoY % measure</h4>
 
 
@@ -154,27 +148,71 @@ DIVIDE(
 
 <b> Here's an explanation for each part:
 <ul>
-&#9733; [Revenue]: This is assumed to be a measure or column representing the revenue for the current period.
+&#8226;  [Revenue]: This is assumed to be a measure or column representing the revenue for the current period.<br><br>
 
-&#9733; CALCULATE([Revenue], SAMEPERIODLASTYEAR('Date'[Date])): This part calculates the revenue for the same period in the previous year using the SAMEPERIODLASTYEAR function. The CALCULATE function modifies the filter context, allowing you to evaluate the [Revenue] measure in a different time period.
+&#8226;  CALCULATE([Revenue], SAMEPERIODLASTYEAR('Date'[Date])): This part calculates the revenue for the same period in the previous year using the SAMEPERIODLASTYEAR function. 
+            The CALCULATE function modifies the filter context, allowing you to evaluate the [Revenue] measure in a different time period.<br><br>
 
-&#9733; [Revenue] - ...: This subtracts the revenue for the previous year from the revenue for the current year.
+&#8226;  [Revenue] - ...: This subtracts the revenue for the previous year from the revenue for the current year.<br><br>
 
-&#9733; DIVIDE(..., ...): The DIVIDE function is used to calculate the percentage change. It takes two arguments: the numerator (the difference between current and previous revenue) and the denominator (the revenue for the previous year).
+&#8226;  DIVIDE(..., ...): The DIVIDE function is used to calculate the percentage change. It takes two arguments: the numerator (the difference between current and previous revenue) and the denominator (the revenue for the previous year).<br><br>
+
 </ul>
 Final Result: The formula calculates the percentage change in revenue from the previous year to the current year.</b><br>
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+<h3>Data Types Reference</h3>
+
+&#10003; Semantic model columns have a set data type, which ensures that all column values conform to that data type. <br>
+&#10003; Column data types are defined in Power Query. <br>
+&#10003; In the case of calculated columns and measure data, it's inferred from the formula. <br>
+
+&#9733; Model data types aren't the same as DAX data types, though a direct relationship exists between them.
 
 
-<b>
-&#8226; is the HTML entity for a bullet point.
-    
-&#9654; is the HTML entity for a right-pointing arrowhead.
-
-&#10003; is the HTML entity for a check mark.
-</b>
-
-
+<table>
+    <tr>
+        <th>Model Data Type</th>
+        <th>DAX Data Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Whole number</td>
+        <td>64-bit integer</td>
+        <td>-263 through 263-1</td>
+    </tr>
+    <tr>
+        <td>Decimal number</td>
+        <td>64-bit real</td>
+        <td>Negative: -1.79 x 10<sup>308</sup> through -2.23 x 10<sup>-308</sup> - zero (0) - positive: 2.23 x 10<sup>-308</sup> through 1.79 x 10<sup>308</sup> - Limited to 17 decimal digits</td>
+    </tr>
+    <tr>
+        <td>Boolean</td>
+        <td>Boolean</td>
+        <td>TRUE or FALSE</td>
+    </tr>
+    <tr>
+        <td>Text</td>
+        <td>String</td>
+        <td>Unicode character string</td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>Date/time</td>
+        <td>Valid dates are all dates after January 1, 1900</td>
+    </tr>
+    <tr>
+        <td>Currency</td>
+        <td>Currency</td>
+        <td>-9.22 x 10<sup>14</sup> through 9.22 x 10<sup>14</sup> - limited to four decimal digits of fixed precision</td>
+    </tr>
+    <tr>
+        <td>N/A</td>
+        <td>BLANK</td>
+        <td>In some cases, it's the equivalent of a database (SQL) NULL</td>
+    </tr>
+</table>
 
 ------------------------------------------------------------------------------------------------------
 
@@ -234,3 +272,11 @@ To create a new column, select the Product table from the Data pane on the right
 Product Color = RELATED ( Products[Color] )
 ```
 
+
+<b>
+&#8226; is the HTML entity for a bullet point.<br>
+    
+&#9654; is the HTML entity for a right-pointing arrowhead.<br>
+
+&#10003; is the HTML entity for a check mark.<br>
+</b>
