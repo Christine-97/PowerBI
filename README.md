@@ -17,14 +17,14 @@ Ship Date = 'Date'
 A DAX formula consists of expressions that return a result. The result is either a table object or a scalar value. Calculated table formulas must return a table object; calculated column and measure formulas must return a scalar value (single value).
 
 Formulas are assembled by using:
-
+<ul>
 DAX functions
 DAX operators
 References to model objects
 Constant values, like the number 24 or the literal text "FY" (abbreviation for fiscal year)
 DAX variables
 Whitespace
- 
+</ul>
 ------------------------------------------------------------------------------------------------------
 
 #Exercise: Adding a calculated table and column
