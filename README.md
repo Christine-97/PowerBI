@@ -32,7 +32,7 @@ DAX functions </li>
 ```
 
 
-Table references
+<h4>Table references</h4>h4>
 
 When you reference a table in a formula, officially, the table name is enclosed within single quotation marks. Single quotation marks can be omitted when both of the following conditions are true:
 
