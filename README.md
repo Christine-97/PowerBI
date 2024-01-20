@@ -214,6 +214,16 @@ Final Result: The formula calculates the percentage change in revenue from the p
     </tr>
 </table>
 
+
+```
+💡 Tip: BLANK data type
+
+DAX uses BLANK for both database NULL and for blank cells in Excel.BLANK doesn't mean zero.
+Two DAX functions are related to the BLANK data type: the BLANK DAX function returns BLANK, while the ISBLANK DAX function tests whether an expression evaluates to BLANK.
+```
+
+
+
 ------------------------------------------------------------------------------------------------------
 
 #Exercise: Adding a calculated table and column
