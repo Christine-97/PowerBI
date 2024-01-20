@@ -50,7 +50,9 @@ A table but not necessarily unique within the model, you can disambiguate the co
 Disambiguated column is known as a fully qualified column. Some DAX functions require passing in fully qualified columns.
 
 
-
+```
+Revenue = SUM(Sales[Sales Amount])
+```
 
 ------------------------------------------------------------------------------------------------------
 
