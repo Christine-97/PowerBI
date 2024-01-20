@@ -25,6 +25,13 @@ Formulas are assembled by using:
 <li>DAX variables</li>
 <li>Whitespace</li>
 </ul>
+
+```
+<figure>
+  <figcaption>Tip: Use keyboard shortcuts for faster navigation! 🚀</figcaption>
+</figure>
+When you select a DAX function, it also provides you with a definition and description.Use IntelliSense to help you quickly build accurate formulas.
+```
 ------------------------------------------------------------------------------------------------------
 
 #Exercise: Adding a calculated table and column
