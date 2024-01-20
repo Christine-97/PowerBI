@@ -134,7 +134,8 @@ Whitespace refers to characters that you can use to format your formulas in a wa
 
 ```
 
-<h3></h3>
+<h4>Revenue YoY % measure</h4>
+
 
 ```
 Revenue YoY % =
@@ -151,15 +152,15 @@ DIVIDE(
 )
 ```
 
-<b>Here's an explanation for each part:
+<b> Here's an explanation for each part:
 
-[Revenue]: This is assumed to be a measure or column representing the revenue for the current period.
+&#9733; [Revenue]: This is assumed to be a measure or column representing the revenue for the current period.
 
-CALCULATE([Revenue], SAMEPERIODLASTYEAR('Date'[Date])): This part calculates the revenue for the same period in the previous year using the SAMEPERIODLASTYEAR function. The CALCULATE function modifies the filter context, allowing you to evaluate the [Revenue] measure in a different time period.
+&#9733; CALCULATE([Revenue], SAMEPERIODLASTYEAR('Date'[Date])): This part calculates the revenue for the same period in the previous year using the SAMEPERIODLASTYEAR function. The CALCULATE function modifies the filter context, allowing you to evaluate the [Revenue] measure in a different time period.
 
-[Revenue] - ...: This subtracts the revenue for the previous year from the revenue for the current year.
+&#9733; [Revenue] - ...: This subtracts the revenue for the previous year from the revenue for the current year.
 
-DIVIDE(..., ...): The DIVIDE function is used to calculate the percentage change. It takes two arguments: the numerator (the difference between current and previous revenue) and the denominator (the revenue for the previous year).
+&#9733; DIVIDE(..., ...): The DIVIDE function is used to calculate the percentage change. It takes two arguments: the numerator (the difference between current and previous revenue) and the denominator (the revenue for the previous year).
 
 Final Result: The formula calculates the percentage change in revenue from the previous year to the current year.</b>
 
