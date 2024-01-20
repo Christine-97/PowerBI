@@ -1,7 +1,7 @@
-# PowerBI
+<h1># PowerBI </h1>
 
 
-<h3>Write DAX formulas</h3>
+<h2>Write DAX formulas</h2>
 
 Template to create a model calculation:
 
@@ -32,7 +32,7 @@ DAX functions </li>
 ```
 
 
-<h4>Table references</h4>
+<h3>Table references</h3>
 
 When you reference a table in a formula, officially, the table name is enclosed within single quotation marks. Single quotation marks can be omitted when both of the following conditions are true:
 
@@ -41,6 +41,13 @@ When you reference a table in a formula, officially, the table name is enclosed 
 <li>The table name isn't a reserved word that's used by DAX. All DAX function names and operators are reserved words. Date is a DAX function name, which explains why, when you are referencing a table named Date, that you must enclose it within single quotation marks.</li>
 </ul>
 
+
+<h3>Column references</h3>
+
+When you reference a column in a formula, the column name must be enclosed within square brackets.
+
+A table but not necessarily unique within the model, you can disambiguate the column reference by preceding it with its table name.
+Disambiguated column is known as a fully qualified column. Some DAX functions require passing in fully qualified columns.
 
 
 
