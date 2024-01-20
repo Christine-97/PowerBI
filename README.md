@@ -65,7 +65,9 @@ Profit = [Revenue] - [Cost]
 
 
 
-How to reference columns and measures within the context of data modeling or analytical work?
+```
+
+💡 Tip:  How to reference columns and measures within the context of data modeling or analytical work?
 
 Here's a breakdown of the key points:
 
@@ -90,6 +92,7 @@ In summary, the recommendation is to maintain consistency in referencing convent
 Prefer referencing columns with their table names for clarity and to avoid ambiguity.
 Avoid including the table name when referencing measures, as they are considered model-level objects and the table reference is deemed unnecessary in this context.
 
+```
 
 
 
