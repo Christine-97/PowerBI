@@ -153,7 +153,7 @@ DIVIDE(
 ```
 
 <b> Here's an explanation for each part:
-
+<ul>
 &#9733; [Revenue]: This is assumed to be a measure or column representing the revenue for the current period.
 
 &#9733; CALCULATE([Revenue], SAMEPERIODLASTYEAR('Date'[Date])): This part calculates the revenue for the same period in the previous year using the SAMEPERIODLASTYEAR function. The CALCULATE function modifies the filter context, allowing you to evaluate the [Revenue] measure in a different time period.
@@ -161,7 +161,7 @@ DIVIDE(
 &#9733; [Revenue] - ...: This subtracts the revenue for the previous year from the revenue for the current year.
 
 &#9733; DIVIDE(..., ...): The DIVIDE function is used to calculate the percentage change. It takes two arguments: the numerator (the difference between current and previous revenue) and the denominator (the revenue for the previous year).
-
+</ul>
 Final Result: The formula calculates the percentage change in revenue from the previous year to the current year.</b>
 
 
