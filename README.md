@@ -165,6 +165,7 @@ DIVIDE(
 Final Result: The formula calculates the percentage change in revenue from the previous year to the current year.</b>
 
 
+
 <b>
 &#8226; is the HTML entity for a bullet point.
     
