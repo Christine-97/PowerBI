@@ -63,6 +63,36 @@ When you reference a measure in a formula, like column name references, the meas
 Profit = [Revenue] - [Cost]
 ```
 
+
+
+How to reference columns and measures within the context of data modeling or analytical work?
+
+Here's a breakdown of the key points:
+
+1. Measures and Tables:
+
+Measures are mentioned as "model-level objects," indicating that they are part of the overall data model or analytical framework.
+While measures are assigned to a specific home table for organizational purposes, this assignment is described as a "cosmetic relationship." In other words, it's primarily for organizational or visual purposes in tools like the Fields pane.
+
+
+2. Column References with Table Names:
+
+The statement recommends that when referencing a column, it's a good practice to precede the column reference with its table name. This is common in data modeling to avoid ambiguity when there are columns with the same name in different tables. For example: TableName.ColumnName.
+
+3. Measures References without Table Names:
+
+In contrast, the statement advises against preceding a measure reference with its table name. Unlike columns, measures are model-level objects, and the guidance suggests that it's unnecessary or not recommended to include the table name when referencing a measure. For example: MeasureName rather than TableName.MeasureName.
+
+
+
+In summary, the recommendation is to maintain consistency in referencing conventions:
+
+Prefer referencing columns with their table names for clarity and to avoid ambiguity.
+Avoid including the table name when referencing measures, as they are considered model-level objects and the table reference is deemed unnecessary in this context.
+
+
+
+
 ------------------------------------------------------------------------------------------------------
 
 #Exercise: Adding a calculated table and column
