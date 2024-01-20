@@ -165,6 +165,11 @@ DIVIDE(
 Final Result: The formula calculates the percentage change in revenue from the previous year to the current year.</b>
 
 
+<b>
+&#8226; is the HTML entity for a bullet point.
+&#9654; is the HTML entity for a right-pointing arrowhead.
+&#10003; is the HTML entity for a check mark.
+</b>
 ------------------------------------------------------------------------------------------------------
 
 #Exercise: Adding a calculated table and column
