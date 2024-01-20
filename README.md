@@ -107,7 +107,34 @@ Avoid including the table name when referencing measures, as they are considered
 
 ```
 
+<h3>DAX variables</h3>
 
+Formulas can declare DAX variables to store results.
+
+
+
+<h3>Whitespace</h3>
+
+Whitespace refers to characters that you can use to format your formulas in a way that's quick and simple to understand. Whitespace characters include:
+
+<ul>
+<li>Spaces</li>
+<li>Tabs</li>
+<li>Carriage returns</li>
+</ul>
+
+```
+💡 Tip: consider the following recommendations:
+
+1. Use spaces between operators.
+2. Use tabs to indent nested function calls.
+3. Use carriage returns to separate function arguments, especially when it's too long to fit on a single line. Formatting in this way makes it simpler to troubleshoot, especially when the formula is missing a parenthesis. 
+(In the formula bar, to enter a carriage return, press Shift+Enter. Pressing Enter alone will commit your formula.)
+4. Err on the side of too much whitespace than too little.
+
+```
+
+<h3></h3>
 
 ------------------------------------------------------------------------------------------------------
 
