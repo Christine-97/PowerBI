@@ -18,12 +18,12 @@ A DAX formula consists of expressions that return a result. The result is either
 
 Formulas are assembled by using:
 <ul>
-DAX functions
-DAX operators
-References to model objects
-Constant values, like the number 24 or the literal text "FY" (abbreviation for fiscal year)
-DAX variables
-Whitespace
+<li>DAX functions </li>
+<li>DAX operators</li>
+<li>References to model objects</li>
+<li>Constant values, like the number 24 or the literal text "FY" (abbreviation for fiscal year)</li>
+<li>DAX variables</li>
+<li>Whitespace</li>
 </ul>
 ------------------------------------------------------------------------------------------------------
 
