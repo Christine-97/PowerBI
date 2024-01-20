@@ -17,8 +17,7 @@ Ship Date = 'Date'
 A DAX formula consists of expressions that return a result. The result is either a table object or a scalar value. Calculated table formulas must return a table object; calculated column and measure formulas must return a scalar value (single value).
 
 Formulas are assembled by using:
-<ul>
-<li>DAX functions </li>
+DAX functions </li>
 <li>DAX operators</li>
 <li>References to model objects</li>
 <li>Constant values, like the number 24 or the literal text "FY" (abbreviation for fiscal year)</li>
@@ -31,6 +30,19 @@ Formulas are assembled by using:
 ```
 💡 Tip: When you select a DAX function, it also provides you with a definition and description.Use IntelliSense to help you quickly build accurate formulas.🚀
 ```
+
+
+Table references
+
+When you reference a table in a formula, officially, the table name is enclosed within single quotation marks. Single quotation marks can be omitted when both of the following conditions are true:
+
+<ul>
+<li>The table name does not include embedded spaces.</li>
+<li>The table name isn't a reserved word that's used by DAX. All DAX function names and operators are reserved words. Date is a DAX function name, which explains why, when you are referencing a table named Date, that you must enclose it within single quotation marks.</li>
+</ul>
+
+
+
 
 
 ------------------------------------------------------------------------------------------------------
