@@ -221,8 +221,24 @@ Final Result: The formula calculates the percentage change in revenue from the p
 DAX uses BLANK for both database NULL and for blank cells in Excel.BLANK doesn't mean zero.
 Two DAX functions are related to the BLANK data type: the BLANK DAX function returns BLANK, while the ISBLANK DAX function tests whether an expression evaluates to BLANK.
 ```
+------------------------------------------------------------------------------------------------------
 
+<h2>Work with DAX functions</h2>
 
+Many functions exist that you won't find in Excel because they're specific to data modeling:
+
+<ul>
+&#8226;  Relationship navigation functions<br>
+&#8226;  Filter context modification functions<br>
+&#8226;  Iterator functions<br>
+&#8226;  Time intelligence functions<br>
+&#8226;  Path functions<br>
+</ul>
+
+<a href="https://docs.microsoft.com/en-us/dax/countrows-function-dax">DAX functions</a>
+```
+💡 Tip: To search for documentation that is related to a DAX function, in a web search, enter the keyword DAX followed by the function name.
+```
 
 ------------------------------------------------------------------------------------------------------
 
