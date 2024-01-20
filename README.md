@@ -29,14 +29,8 @@ Formulas are assembled by using:
 
 
 ```
-💡 Tip:
-When you select a DAX function, it also provides you with a definition and description.Use IntelliSense to help you quickly build accurate formulas.🚀
+💡 Tip: When you select a DAX function, it also provides you with a definition and description.Use IntelliSense to help you quickly build accurate formulas.🚀
 ```
-
-<div style="background-color: #f0f0f0; padding: 10px; border: 1px solid #ccc;">
-    <p>This is a colored block with custom styling.</p>
-</div>
-
 
 
 ------------------------------------------------------------------------------------------------------
