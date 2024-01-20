@@ -60,7 +60,20 @@ Revenue = SUM(Sales[Sales Amount])
 When you reference a measure in a formula, like column name references, the measure name must be enclosed within square brackets.
 
 ```
+Same table column reference:
+
 Profit = [Revenue] - [Cost]
+
+______________________________________________________________________
+
+Different table column reference:
+
+AverageSalesPerCustomer = 
+    DIVIDE(
+        SUM(Sales[SalesAmount]),
+        COUNTROWS(Customers)
+    )
+
 ```
 
 
