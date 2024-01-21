@@ -305,6 +305,7 @@ Use the ampersand (&) character to connect, or concatenate, two text values to p
 ```
 Model Color = 'Product'[Model] & "-" & 'Product'[Color]
 ```
+----------------------------------------------------------------------------------------------------------------------
 
 <h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">   Logical operators</h3>
 
@@ -357,10 +358,62 @@ Extended Amount = Sales[Order Quantity] * Sales[Unit Price] * 1 - [Unit Price Di
 Extended Amount = Sales[Order Quantity] * Sales[Unit Price] * (1 - [Unit Price Discount Pct])
 
 ```
+------------------------------------------------------------------------------------------------------
+
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">  Implicit conversion</h3>
+
+DAX formula that uses operators to combine different data types, you don't need to explicitly convert types. DAX automatically identifies the data types of referenced model objects and performs implicit conversions.
+However, if a value or a column has a data type that's incompatible with the current operation, DAX returns an error. 
+
+|🌟 For example: The attempt to multiply a date value will create an error because it isn't logical.|
+|-----------------------|
+
+|💡 Tip: BLANK is treated as zero when acted on by arithmetic operators and as an empty string when concatenated to a string. When BLANKs create unexpected results, consider using the IF and ISBLANK DAX functions to test for BLANK, and then respond in an appropriate way.|
+|-----------------------|
+
+------------------------------------------------------------------------------------------------------
+
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">  Use DAX variables</h3>
 
 
+You can declare DAX variables in your formula expressions. <a href="https://learn.microsoft.com/en-us/dax/best-practices/dax-variables">Use variables to improve your formulas.</a>
+Several benefits using variables:
 
-<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">   </h3>
+Improving the readability and maintenance of your formulas.
+Improving performance because variables are evaluated once and only when or if they're needed.
+Allowing (at design time) straightforward testing of a complex formula by returning the variable of interest.
+
+```
+🚀 Notice that the RETURN clause refers to the variable twice. This improved measure definition formula will run in at least half the time because it doesn't need to evaluate the prior year's revenue twice.
+
+Revenue YoY % =
+VAR RevenuePriorYear =
+    CALCULATE(
+        [Revenue],
+        SAMEPERIODLASTYEAR('Date'[Date])
+    )
+RETURN
+    DIVIDE(
+        [Revenue] - RevenuePriorYear,
+        RevenuePriorYear
+    )
+```
+
+------------------------------------------------------------------------------------------------------
+
+<h2><img src="https://drive.google.com/uc?export=download&id=1cH_fcoZnQotHA6hJmjc5iMMe0URIZnXV" width="20">  Summary</h2>
+
+In this module, you learned how DAX can be used to enhance your model with calculations. Calculation types include calculated tables, calculated columns, and measures.
+
+You also learned about DAX fundamentals, which are essential for writing accurate and efficient DAX formulas. The fundamentals covered how to write DAX formulas, and you were introduced to important topics about DAX data types, DAX functions, DAX operators, references to model objects, constants, and using DAX variables.
+
+------------------------------------------------------------------------------------------------------
+
+<h2><img src="https://drive.google.com/uc?export=download&id=1cH_fcoZnQotHA6hJmjc5iMMe0URIZnXV" width="20">  Reference</h2>
+
+🚀 https://learn.microsoft.com/en-us/training/modules/dax-power-bi-write-formulas/<br>
+🚀 https://learn.microsoft.com/en-us/dax/best-practices/dax-variables</br>
+🚀 https://learn.microsoft.com/en-us/dax/dax-glossary</br>
 
 ------------------------------------------------------------------------------------------------------
 
