@@ -1,7 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>   
+<body>
 <h1># PowerBI </h1>
 
 
-<h2>Write DAX formulas</h2>
+<h2><img src="https://drive.google.com/uc?export=download&id=1H_9MUHK9xMPUTtsVY8mjDs9lcVDIgyBU" width="22"> Write DAX formulas</h2>
 
 Template to create a model calculation:
 
@@ -14,6 +22,7 @@ For example, the definition of the Ship Date calculated table that duplicates th
 Ship Date = 'Date'
 ```
 
+<div style="background-color: #f0f0f0; padding: 50px;">
 A DAX formula consists of expressions that return a result. The result is either a table object or a scalar value. Calculated table formulas must return a table object; calculated column and measure formulas must return a scalar value (single value).
 
 Formulas are assembled by using:
@@ -25,11 +34,10 @@ DAX functions </li>
 <li>Whitespace</li>
 </ul>
 </br>
+</div>
 
-
-```
-💡 Tip: When you select a DAX function, it also provides you with a definition and description.Use IntelliSense to help you quickly build accurate formulas.🚀
-```
+|💡 Tip: When you select a DAX function, it also provides you with a definition and description.Use IntelliSense to help you quickly build accurate formulas.🚀|
+|------------------------------------------------------------------------------------------------------|
 
 
 <h3>Table references</h3>
@@ -75,31 +83,16 @@ AverageSalesPerCustomer =
     )
 
 ```
+| 💡 Tip: How to Reference Columns and Measures within the Context of Data Modeling or Analytical Work? |
+|------------------------------------------------------------------------------------------------------|
+| **1. Measures and Tables:** Measures are mentioned as "model-level objects," part of the overall data model or analytical framework. While measures are assigned to a specific home table for organizational purposes, this assignment is described as a "cosmetic relationship," primarily for organizational or visual purposes in tools like the Fields pane. |
+| **2. Column References with Table Names:** The statement recommends that when referencing a column, it's a good practice to precede the column reference with its table name. This is common in data modeling to avoid ambiguity when there are columns with the same name in different tables. For example: TableName.ColumnName. |
+| **3. Measures References without Table Names:** In contrast, the statement advises against preceding a measure reference with its table name. Unlike columns, measures are model-level objects, and the guidance suggests that it's unnecessary or not recommended to include the table name when referencing a measure. For example: MeasureName rather than TableName.MeasureName. | 
 
-
-
-```
-
-💡 Tip:  How to reference columns and measures within the context of data modeling or analytical work?
-
-Here's a breakdown of the key points:
-
-1. Measures and Tables:   Measures are mentioned as "model-level objects," indicating that they are part of the overall data model or analytical framework.
-While measures are assigned to a specific home table for organizational purposes, this assignment is described as a "cosmetic relationship." In other words, it's primarily for organizational or visual purposes in tools like the Fields pane.
-
-
-2. Column References with Table Names:  The statement recommends that when referencing a column, it's a good practice to precede the column reference with its table name. This is common in data modeling to avoid ambiguity when there are columns with the same name in different tables. For example: TableName.ColumnName.
-
-3. Measures References without Table Names:  In contrast, the statement advises against preceding a measure reference with its table name. Unlike columns, measures are model-level objects, and the guidance suggests that it's unnecessary or not recommended to include the table name when referencing a measure. For example: MeasureName rather than TableName.MeasureName.
-
-
-
-In summary, the recommendation is to maintain consistency in referencing conventions:
-
-Prefer referencing columns with their table names for clarity and to avoid ambiguity.
-Avoid including the table name when referencing measures, as they are considered model-level objects and the table reference is deemed unnecessary in this context.
-
-```
+| **In Summary, the recommendation is to maintain consistency in referencing conventions:** |
+|-------------------------------------------------------------------------------------------|
+| - Prefer referencing columns with their table names for clarity and to avoid ambiguity.     |
+| - Avoid including the table name when referencing measures, as they are considered model-level objects, and the table reference is deemed unnecessary in this context. |
 
 <h3>DAX variables</h3>
 
@@ -117,16 +110,14 @@ Whitespace refers to characters that you can use to format your formulas in a wa
 <li>Carriage returns</li>
 </ul>
 
-```
-💡 Tip: consider the following recommendations:
+| 💡 Tip: Consider the following recommendations: |
+|-------------------------------------------------|
+| **1. Use Spaces Between Operators:** Ensure readability by including spaces between operators in your formulas. For example, write `a + b` instead of `a+b`. |
+| **2. Use Tabs to Indent Nested Function Calls:** When dealing with nested function calls, use tabs for indentation to enhance clarity in your code structure. |
+| **3. Use Carriage Returns to Separate Function Arguments:** Especially when function calls or arguments are too long to fit on a single line, use carriage returns for better formatting. In the formula bar, press Shift+Enter to enter a carriage return; pressing Enter alone commits your formula. This makes troubleshooting easier, especially when dealing with missing parentheses. |
+| **4. Err on the Side of Too Much Whitespace:** When formatting your code, prioritize having more whitespace than too little. This helps in improving code readability and makes it easier to maintain and troubleshoot. |
 
-1. Use spaces between operators.
-2. Use tabs to indent nested function calls.
-3. Use carriage returns to separate function arguments, especially when it's too long to fit on a single line. Formatting in this way makes it simpler to troubleshoot, especially when the formula is missing a parenthesis. 
-(In the formula bar, to enter a carriage return, press Shift+Enter. Pressing Enter alone will commit your formula.)
-4. Err on the side of too much whitespace than too little.
 
-```
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 <h4>Revenue YoY % measure</h4>
 
@@ -214,16 +205,15 @@ Final Result: The formula calculates the percentage change in revenue from the p
     </tr>
 </table>
 
+| 💡 Tip: BLANK Data Type  <br> <ul> 1. DAX uses BLANK for both database NULL and for blank cells in Excel. <br>   2. BLANK doesn't mean zero. Two DAX functions are related to the BLANK data type: the BLANK DAX function returns BLANK, while the ISBLANK DAX function tests whether an expression evaluates to BLANK. </ul>|
+|:------------------------------------------------------------------------|
 
-```
-💡 Tip: BLANK data type
-
-DAX uses BLANK for both database NULL and for blank cells in Excel.BLANK doesn't mean zero.
-Two DAX functions are related to the BLANK data type: the BLANK DAX function returns BLANK, while the ISBLANK DAX function tests whether an expression evaluates to BLANK.
-```
 ------------------------------------------------------------------------------------------------------
 
-<h2>Work with DAX functions</h2>
+<h2><img src="https://drive.google.com/uc?export=download&id=12VWb9dFYI3mGJ0MH2xWP5bL3IR-3pHeg" width="21"> Work with DAX functions</h2>
+
+|💡 Tip: A function argument is optional when documentation shows it enclosed within square brackets.|
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 Many functions exist that you won't find in Excel because they're specific to data modeling:
 
@@ -235,11 +225,106 @@ Many functions exist that you won't find in Excel because they're specific to da
 &#8226;  Path functions<br>
 </ul>
 
-<a href="https://docs.microsoft.com/en-us/dax/countrows-function-dax">DAX functions</a>
+
+
+|💡 Tip: To search for documentation that is related to a <a href="https://docs.microsoft.com/en-us/dax/countrows-function-dax">DAX functions</a>, in a web search, enter the keyword DAX followed by the function name.|
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+<h3><p>Functions that originate from Excel</p></h3>
+
+The IF DAX function tests whether a condition that's provided as the first argument is met. It returns one value if the condition is TRUE and returns the other value if the condition is FALSE. If logical_test evaluates to FALSE and value_if_false isn't provided, the function will return BLANK.
+
+The function's syntax is:
 ```
-💡 Tip: To search for documentation that is related to a DAX function, in a web search, enter the keyword DAX followed by the function name.
+IF(<logical_test>, <value_if_true>[, <value_if_false>])
 ```
 
+<h3>Functions that don't originate from Excel</h3>
+
+ Two useful DAX functions that aren't specific to modeling and that don't originate from Excel are DISTINCTCOUNT and DIVIDE.
+
+&#9654; DISTINCTCOUNT function : DAX function to count the number of distinct values in a column.
+
+&#9654; You must pass in numerator and denominator expressions. Optionally, you can pass in a value that represents an alternate result. 
+
+The DIVIDE function's syntax is:
+```
+DIVIDE(<numerator>, <denominator>[, <alternate_result>])
+```
+------------------------------------------------------------------------------------------------------
+
+<h2><img src="https://drive.google.com/uc?export=download&id=1Y6OfjytssW-3xQYcFr-dP7Fj_nnufyS6" width="21"> Use DAX operators</h2>
+
+
+Your DAX formulas can use operators to create expressions that perform arithmetic calculations, compare values, work with strings, or test conditions.
+
+<h3>Arithmetic operators</h3>
+
+The following table lists the arithmetic operators.
+
+| Operator | Description      |
+|----------|------------------|
+| +        | Addition         |
+| -        | Subtraction      |
+| *        | Multiplication   |
+| /        | Division         |
+| ^        | Exponentiation   |
+
+
+<h3>Comparison operators</h3>
+
+The following table lists the comparison operators, which are used to compare two values. The result is either TRUE or FALSE.
+
+| Operator | Description                 |
+|----------|-----------------------------|
+| =        | Equal to                    |
+| ==       | Strict equal to             |
+| >        | Greater than                |
+| <        | Less than                   |
+| >=       | Greater than or equal to    |
+| <=       | Less than or equal to       |
+| <>       | Not equal to                |
+
+
+|💡 Tip: This statement is explaining the behavior of comparison operators in the context of a data analysis or programming language, particularly in scenarios where there is a concept of a special placeholder or null value, often represented as "BLANK."|
+|-----------------------|
+|Let's break down the key points:<br>1. Comparison Operators:<br><ul>Comparison operators are used to compare values in programming or data analysis languages.<br><br>Examples of comparison operators include =, ==, >, <, >=, <=, and <> (not equal to).<br><br><br>2. Strict Equal To (==):<br>The statement notes that the strict equal to operator (==) behaves differently from other comparison operators.<br>It checks for equality of both value and data type.<br><br><br>3. Treatment of BLANK:<br> BLANK is considered as equal to certain values, including zero, an empty string (""), the date December 30, 1899, or FALSE.<br>When using comparison operators like =, >, <, >=, <=, or <>, BLANK is treated as equal to these specific values.<br><br><br>4. Example with [Revenue] = 0:<br>The statement provides an example: [Revenue] = 0 will be TRUE when the value of [Revenue] is either zero or BLANK.<br>In other words, if the value of [Revenue] is zero or if it is BLANK, the expression evaluates to TRUE.<br><br><br>5. Difference with [Revenue] == 0:<br>The statement contrasts this with [Revenue] == 0, which is TRUE only when the value of [Revenue] is zero.<br>In the strict equal to comparison (==), BLANK is not considered equal to zero.<br> </ul>|
+
+|***In summary, the behavior described highlights how certain comparison operators treat BLANK as equal to specific values, while the strict equal to operator checks for both value and data type, resulting in a more precise comparison. This understanding is crucial when working with data that may contain null or special values.|
+|-------------|                                                                                                                                                                                                                                                                          
+
+<h3>Text concatenation operator</h3>
+
+Use the ampersand (&) character to connect, or concatenate, two text values to produce one continuous text value.
+
+```
+Model Color = 'Product'[Model] & "-" & 'Product'[Color]
+```
+
+<h3>Logical operators</h3>
+
+Use logical operators to combine expressions that produce a single result. The following table lists all logical operators.
+
+
+| Operator | Description |
+|----------|-------------|
+| &&       | Creates an AND condition between two expressions where each has a Boolean result. If both expressions return TRUE, the combination of the expressions also returns TRUE; otherwise, the combination returns FALSE. |
+| \|\| (double pipe) | Creates an OR condition between two logical expressions. If either expression returns TRUE, the result is TRUE; only when both expressions are FALSE is the result FALSE. |
+| IN       | Creates a logical OR condition between each row that is being compared to a table. Note: The table constructor syntax uses braces. |
+| NOT      | Inverts the state of a Boolean expression (FALSE to TRUE, and vice versa). |
+
+```
+An example that uses the IN logical operator:
+
+ANZ Revenue =
+CALCULATE(
+    [Revenue],
+    Customer[Country-Region] IN {
+        "Australia",
+        "New Zealand"
+    }
+)
+```
 ------------------------------------------------------------------------------------------------------
 
 #Exercise: Adding a calculated table and column
@@ -306,3 +391,7 @@ Product Color = RELATED ( Products[Color] )
 
 &#10003; is the HTML entity for a check mark.<br>
 </b>
+
+</body>
+</html>
+
