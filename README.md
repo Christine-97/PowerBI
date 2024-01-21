@@ -22,8 +22,8 @@ For example, the definition of the Ship Date calculated table that duplicates th
 Ship Date = 'Date'
 ```
 
-<div style="background-color: #f0f0f0; padding: 50px;">
-A DAX formula consists of expressions that return a result. The result is either a table object or a scalar value. Calculated table formulas must return a table object; calculated column and measure formulas must return a scalar value (single value).
+----------------------------------------------------------------------------------------------
+A DAX formula consists of expressions that return a result. The result is either a table object or a scalar value. Calculated table formulas must return a table object; calculated column and measure formulas must return a scalar value (single value). 
 
 Formulas are assembled by using:
 DAX functions </li>
@@ -34,22 +34,21 @@ DAX functions </li>
 <li>Whitespace</li>
 </ul>
 </br>
-</div>
+
 
 |💡 Tip: When you select a DAX function, it also provides you with a definition and description.Use IntelliSense to help you quickly build accurate formulas.🚀|
 |------------------------------------------------------------------------------------------------------|
 
-
+------------------------------------------------------------------------------------------------------------------
 <h3>Table references</h3>
 
 When you reference a table in a formula, officially, the table name is enclosed within single quotation marks. Single quotation marks can be omitted when both of the following conditions are true:
-
 <ul>
 <li>The table name does not include embedded spaces.</li>
 <li>The table name isn't a reserved word that's used by DAX. All DAX function names and operators are reserved words. Date is a DAX function name, which explains why, when you are referencing a table named Date, that you must enclose it within single quotation marks.</li>
-</ul>
+</ul></br>
 
-
+------------------------------------------------------------------------------------------------------------
 <h3>Column references</h3>
 
 When you reference a column in a formula, the column name must be enclosed within square brackets.
@@ -62,7 +61,7 @@ Disambiguated column is known as a fully qualified column. Some DAX functions re
 Revenue = SUM(Sales[Sales Amount])
 ```
 
-
+----------------------------------------------------------------------------------------------------------------
 <h3>Measure references</h3>
 
 When you reference a measure in a formula, like column name references, the measure name must be enclosed within square brackets.
@@ -94,6 +93,9 @@ AverageSalesPerCustomer =
 | - Prefer referencing columns with their table names for clarity and to avoid ambiguity.     |
 | - Avoid including the table name when referencing measures, as they are considered model-level objects, and the table reference is deemed unnecessary in this context. |
 
+
+----------------------------------------------------------------------------------------------
+
 <h3>DAX variables</h3>
 
 Formulas can declare DAX variables to store results.
@@ -118,7 +120,8 @@ Whitespace refers to characters that you can use to format your formulas in a wa
 | **4. Err on the Side of Too Much Whitespace:** When formatting your code, prioritize having more whitespace than too little. This helps in improving code readability and makes it easier to maintain and troubleshoot. |
 
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+---------------------------------------------------------------------------------------
+
 <h4>Revenue YoY % measure</h4>
 
 
@@ -151,7 +154,7 @@ DIVIDE(
 </ul>
 Final Result: The formula calculates the percentage change in revenue from the previous year to the current year.</b><br>
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------------------------------------------------------------------------------------
 
 <h3>Data Types Reference</h3>
 
@@ -238,7 +241,7 @@ The function's syntax is:
 ```
 IF(<logical_test>, <value_if_true>[, <value_if_false>])
 ```
-
+------------------------------------------------------------------------------------------------------
 <h3>Functions that don't originate from Excel</h3>
 
  Two useful DAX functions that aren't specific to modeling and that don't originate from Excel are DISTINCTCOUNT and DIVIDE.
@@ -270,7 +273,7 @@ The following table lists the arithmetic operators.
 | /        | Division         |
 | ^        | Exponentiation   |
 
-
+----------------------------------------------------------------------------------------------------------------
 <h3>Comparison operators</h3>
 
 The following table lists the comparison operators, which are used to compare two values. The result is either TRUE or FALSE.
@@ -291,7 +294,9 @@ The following table lists the comparison operators, which are used to compare tw
 |Let's break down the key points:<br>1. Comparison Operators:<br><ul>Comparison operators are used to compare values in programming or data analysis languages.<br><br>Examples of comparison operators include =, ==, >, <, >=, <=, and <> (not equal to).<br><br><br>2. Strict Equal To (==):<br>The statement notes that the strict equal to operator (==) behaves differently from other comparison operators.<br>It checks for equality of both value and data type.<br><br><br>3. Treatment of BLANK:<br> BLANK is considered as equal to certain values, including zero, an empty string (""), the date December 30, 1899, or FALSE.<br>When using comparison operators like =, >, <, >=, <=, or <>, BLANK is treated as equal to these specific values.<br><br><br>4. Example with [Revenue] = 0:<br>The statement provides an example: [Revenue] = 0 will be TRUE when the value of [Revenue] is either zero or BLANK.<br>In other words, if the value of [Revenue] is zero or if it is BLANK, the expression evaluates to TRUE.<br><br><br>5. Difference with [Revenue] == 0:<br>The statement contrasts this with [Revenue] == 0, which is TRUE only when the value of [Revenue] is zero.<br>In the strict equal to comparison (==), BLANK is not considered equal to zero.<br> </ul>|
 
 |***In summary, the behavior described highlights how certain comparison operators treat BLANK as equal to specific values, while the strict equal to operator checks for both value and data type, resulting in a more precise comparison. This understanding is crucial when working with data that may contain null or special values.|
-|-------------|                                                                                                                                                                                                                                                                          
+|-------------|       
+
+----------------------------------------------------------------------------------------------------------------                                                           
 
 <h3>Text concatenation operator</h3>
 
@@ -325,6 +330,34 @@ CALCULATE(
     }
 )
 ```
+----------------------------------------------------------------------------------------------------------------  
+
+<h3>Operator precedence</h3>
+
+ When your DAX formula includes multiple operators, DAX uses rules to determine the evaluation order, which is known as an operators precedence. Operations are ordered according to the following table.
+
+| Operator | Description                           |
+|----------|---------------------------------------|
+| ^        | Exponentiation                        |
+| -        | Sign (as in -1)                       |
+| * and /  | Multiplication and division           |
+| NOT      | NOT                                   |
+| + and -  | Addition and subtraction              |
+| &        | Concatenation of two strings of text  |
+| =, ==, <, >, <=, >=, <> | Comparison                   |
+
+|💡 Tip: When the operators have equal precedence value, they're ordered from left to right.If you need to override the evaluation order, then group operations within parentheses.|
+|-----------------------|
+
+```
+>  Incorrect calculated:
+Extended Amount = Sales[Order Quantity] * Sales[Unit Price] * 1 - [Unit Price Discount Pct]
+
+>  Correct calculated:
+Extended Amount = Sales[Order Quantity] * Sales[Unit Price] * (1 - [Unit Price Discount Pct])
+
+```
+
 ------------------------------------------------------------------------------------------------------
 
 #Exercise: Adding a calculated table and column
