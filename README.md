@@ -358,6 +358,10 @@ Extended Amount = Sales[Order Quantity] * Sales[Unit Price] * (1 - [Unit Price D
 
 ```
 
+
+
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15"></h3>
+
 ------------------------------------------------------------------------------------------------------
 
 #Exercise: Adding a calculated table and column
