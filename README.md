@@ -40,7 +40,7 @@ DAX functions </li>
 |------------------------------------------------------------------------------------------------------|
 
 ------------------------------------------------------------------------------------------------------------------
-<h3>Table references</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Table references</h3>
 
 When you reference a table in a formula, officially, the table name is enclosed within single quotation marks. Single quotation marks can be omitted when both of the following conditions are true:
 <ul>
@@ -49,7 +49,7 @@ When you reference a table in a formula, officially, the table name is enclosed 
 </ul></br>
 
 ------------------------------------------------------------------------------------------------------------
-<h3>Column references</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Column references</h3>
 
 When you reference a column in a formula, the column name must be enclosed within square brackets.
 
@@ -62,7 +62,7 @@ Revenue = SUM(Sales[Sales Amount])
 ```
 
 ----------------------------------------------------------------------------------------------------------------
-<h3>Measure references</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Measure references</h3>
 
 When you reference a measure in a formula, like column name references, the measure name must be enclosed within square brackets.
 
@@ -96,13 +96,13 @@ AverageSalesPerCustomer =
 
 ----------------------------------------------------------------------------------------------
 
-<h3>DAX variables</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">DAX variables</h3>
 
 Formulas can declare DAX variables to store results.
 
 
 
-<h3>Whitespace</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Whitespace</h3>
 
 Whitespace refers to characters that you can use to format your formulas in a way that's quick and simple to understand. Whitespace characters include:
 
@@ -156,7 +156,7 @@ Final Result: The formula calculates the percentage change in revenue from the p
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-<h3>Data Types Reference</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Data Types Reference</h3>
 
 &#10003; Semantic model columns have a set data type, which ensures that all column values conform to that data type. <br>
 &#10003; Column data types are defined in Power Query. <br>
@@ -233,7 +233,7 @@ Many functions exist that you won't find in Excel because they're specific to da
 |💡 Tip: To search for documentation that is related to a <a href="https://docs.microsoft.com/en-us/dax/countrows-function-dax">DAX functions</a>, in a web search, enter the keyword DAX followed by the function name.|
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-<h3><p>Functions that originate from Excel</p></h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15"><p>Functions that originate from Excel</p></h3>
 
 The IF DAX function tests whether a condition that's provided as the first argument is met. It returns one value if the condition is TRUE and returns the other value if the condition is FALSE. If logical_test evaluates to FALSE and value_if_false isn't provided, the function will return BLANK.
 
@@ -242,7 +242,7 @@ The function's syntax is:
 IF(<logical_test>, <value_if_true>[, <value_if_false>])
 ```
 ------------------------------------------------------------------------------------------------------
-<h3>Functions that don't originate from Excel</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Functions that don't originate from Excel</h3>
 
  Two useful DAX functions that aren't specific to modeling and that don't originate from Excel are DISTINCTCOUNT and DIVIDE.
 
@@ -261,7 +261,7 @@ DIVIDE(<numerator>, <denominator>[, <alternate_result>])
 
 Your DAX formulas can use operators to create expressions that perform arithmetic calculations, compare values, work with strings, or test conditions.
 
-<h3>Arithmetic operators</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Arithmetic operators</h3>
 
 The following table lists the arithmetic operators.
 
@@ -274,7 +274,7 @@ The following table lists the arithmetic operators.
 | ^        | Exponentiation   |
 
 ----------------------------------------------------------------------------------------------------------------
-<h3>Comparison operators</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Comparison operators</h3>
 
 The following table lists the comparison operators, which are used to compare two values. The result is either TRUE or FALSE.
 
@@ -298,7 +298,7 @@ The following table lists the comparison operators, which are used to compare tw
 
 ----------------------------------------------------------------------------------------------------------------                                                           
 
-<h3>Text concatenation operator</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Text concatenation operator</h3>
 
 Use the ampersand (&) character to connect, or concatenate, two text values to produce one continuous text value.
 
@@ -306,7 +306,7 @@ Use the ampersand (&) character to connect, or concatenate, two text values to p
 Model Color = 'Product'[Model] & "-" & 'Product'[Color]
 ```
 
-<h3>Logical operators</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Logical operators</h3>
 
 Use logical operators to combine expressions that produce a single result. The following table lists all logical operators.
 
@@ -332,7 +332,7 @@ CALCULATE(
 ```
 ----------------------------------------------------------------------------------------------------------------  
 
-<h3>Operator precedence</h3>
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">Operator precedence</h3>
 
  When your DAX formula includes multiple operators, DAX uses rules to determine the evaluation order, which is known as an operators precedence. Operations are ordered according to the following table.
 
