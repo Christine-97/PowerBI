@@ -232,8 +232,8 @@ Many functions exist that you won't find in Excel because they're specific to da
 
 |💡 Tip: To search for documentation that is related to a <a href="https://docs.microsoft.com/en-us/dax/countrows-function-dax">DAX functions</a>, in a web search, enter the keyword DAX followed by the function name.|
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">   <p>Functions that originate from Excel</p></h3>
+____________________________________________________________________________________________________________________________________________________________
+<h3><img src="https://drive.google.com/uc?export=download&id=12hQicIIeBzQxd2iG3bfrIcu9RHQNRgA8" width="15">   Functions that originate from Excel</h3>
 
 The IF DAX function tests whether a condition that's provided as the first argument is met. It returns one value if the condition is TRUE and returns the other value if the condition is FALSE. If logical_test evaluates to FALSE and value_if_false isn't provided, the function will return BLANK.
 
