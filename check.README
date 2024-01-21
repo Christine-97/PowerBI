@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+<h1># PowerBI </h1>
+
+<h2><img src="https://drive.google.com/uc?export=download&id=1H_9MUHK9xMPUTtsVY8mjDs9lcVDIgyBU" width="22"> Write DAX formulas</h2>
+
+<p>Template to create a model calculation:</p>
+
+<pre>
+<code>&lt;Calculation name&gt; = &lt;DAX formula&gt;</code>
+</pre>
+
+<p>For example, the definition of the Ship Date calculated table that duplicates the Date table data is:</p>
+
+<pre>
+<code>Ship Date = 'Date'</code>
+</pre>
+
+<div style="background-color: #f0f0f0; padding: 50px;">
+    <p>A DAX formula consists of expressions that return a result. The result is either a table object or a scalar value. Calculated table formulas must return a table object; calculated column and measure formulas must return a scalar value (single value).</p>
+
+    <p>Formulas are assembled by using:</p>
+
+    <ul>
+        <li>DAX functions</li>
+        <li>DAX operators</li>
+        <li>References to model objects</li>
+        <li>Constant values, like the number 24 or the literal text "FY" (abbreviation for fiscal year)</li>
+        <li>DAX variables</li>
+        <li>Whitespace</li>
+    </ul>
+</div>
+
+<p>|💡 Tip: When you select a DAX function, it also provides you with a definition and description. Use IntelliSense to help you quickly build accurate formulas. 🚀|</p>
+
+<h3>Table references</h3>
+
+<p>When you reference a table in a formula, officially, the table name is enclosed within single quotation marks. Single quotation marks can be omitted when both of the following conditions are true:</p>
+
+<ul>
+    <li>The table name does not include embedded spaces.</li>
+    <li>The table name isn't a reserved word that's used by DAX. All DAX function names and operators are reserved words. Date is a DAX function name, which explains why, when you are referencing a table named Date, that you must enclose it within single quotation marks.</li>
+</ul>
+
+<h3>Column references</h3>
+
+<p>When you reference a column in a formula, the column name must be enclosed within square brackets.</p>
+
+<p>A table but not necessarily unique within the model, you can disambiguate the column reference by preceding it with its table name. Disambiguated column is known as a fully qualified column. Some DAX functions require passing in fully qualified columns.</p>
+
+<pre>
+<code>Revenue = SUM(Sales[Sales Amount])</code>
+</pre>
+
+<h3>Measure references</h3>
+
+<p>When you reference a measure in a formula, like column name references, the measure name must be enclosed within square brackets.</p>
+
+<pre>
+<code>* Same table column reference:
+
+Profit = [Revenue] - [Cost]
+
+______________________________________________________________________
+
+* Different table column reference:
+
+AverageSalesPerCustomer = 
+    DIVIDE(
+        SUM(Sales[SalesAmount]),
+        COUNTROWS(Customers)
+    )</code>
+</pre>
+
+<p>| 💡 Tip: How to Reference Columns and Measures within the Context of Data Modeling or Analytical Work? |</p>
+
+<p>| **1. Measures and Tables:** Measures are mentioned as "model-level objects," part of the overall data model or analytical framework. While measures are assigned to a specific home table for organizational purposes, this assignment is described as a "cosmetic relationship," primarily for organizational or visual purposes in tools like the Fields pane. |</p>
+
+<p>| **2. Column References with Table Names:** The statement recommends that when referencing a column, it's a good practice to precede the column reference with its table name. This is common in data modeling to avoid ambiguity when there are columns with the same name in different tables. For example: TableName.ColumnName. |</p>
+
+<p>| **3. Measures References without Table Names:** In contrast, the statement advises against preceding a measure reference with its table name. Unlike columns, measures are model-level objects, and the guidance suggests that it's unnecessary or not recommended to include the table name when referencing a measure. For example: MeasureName rather than TableName.MeasureName. |</p>
+
+<p>| **In Summary, the recommendation is to maintain consistency in referencing conventions:** |</p>
+
+<p>| - Prefer referencing columns with their table names for clarity and to avoid ambiguity.     |</p>
+<p>| - Avoid including the table name when referencing measures, as they are considered model-level objects, and the table reference is deemed unnecessary in this context. |</p>
+
+<h3>DAX variables</h3>
+
+<p>Formulas can declare DAX variables to store results.</p>
+
+<h3>Whitespace</h3>
+
+<p>Whitespace refers to characters that you can use to format your formulas in a way that's quick and simple to understand. Whitespace characters include:</p>
+
+<ul>
+    <li>Spaces</li>
+    <li>Tabs</li>
+    <li>Carriage returns</li>
+</ul>
+
+<p>| 💡 Tip: Consider the following recommendations: |</p>
+
+<p>| **1. Use Spaces Between Operators:** Ensure readability by including spaces between operators in your formulas. For example, write `a + b` instead of `a+b`. |</p>
+<p>| **2. Use Tabs to Indent Nested Function Calls:** When dealing with nested function calls, use tabs for indentation to enhance clarity in your code structure. |</p>
+<p>| **3. Use Carriage Returns to Separate Function Arguments:** Especially when function calls or arguments are too long to fit on a single line, use carriage returns for better formatting. In the formula bar, press Shift+Enter to enter a carriage return; pressing Enter alone commits your formula. This makes troubleshooting easier, especially when dealing with missing parentheses. |</p>
+<p>| **4. Err on the Side of Too Much Whitespace:** When formatting your code, prioritize having more whitespace than too little. This helps in improving code readability and makes it easier to maintain and troubleshoot. |</p>
+
+<hr>
+
+<h4>Revenue YoY % measure</h4>
+
+<pre>
+<code>Revenue YoY % =
+DIVIDE(
+    [Revenue]
+        - CALCULATE(
+            [Revenue],
+            SAMEPERIODLASTYEAR('Date'[Date])
+    ),
+    CALCULATE(
+        [Revenue],
+        SAMEPERIODLASTYEAR('Date'[Date])
+    )
+)</code>
+</pre>
+
+<b> Here's an explanation for each part:</b>
+
+<ul>
+    <li> [Revenue]: This is assumed to be a measure or column representing the revenue for the current period.</li>
+    <li> CALCULATE([Revenue], SAMEPERIODLASTYEAR('Date'[Date])): This part calculates the revenue for the same period in the previous year using the SAMEPERIODLASTYEAR function. The CALCULATE function modifies the filter context, allowing you to evaluate the [Revenue] measure in a different time period.</li>
+    <li> [Revenue] - ...: This subtracts the revenue for the previous year from the revenue for the current year.</li>
+    <li> DIVIDE(..., ...): The DIVIDE function is used to calculate the percentage change. It takes two arguments: the numerator (the difference between current and previous revenue) and the denominator (the revenue for the previous year).</li>
+</ul>
+
+<b>Final Result:</b> The formula calculates the percentage change in revenue from the previous year to the current year.
+
+<hr>
+
+<h3>Data Types Reference</h3>
+
+<p>&#10003; Semantic model columns have a set data type, which ensures that all column values conform to that data type.</p>
+<p>&#10003; Column data types are defined in Power Query.</p>
+<p>&#10003; In the case of calculated columns and measure data, it's inferred from the formula.</p>
+<p>&#9733; Model data types aren't the same as DAX data types, though a direct relationship exists between them.</p>
+
+<table>
+    <tr>
+        <th>Model Data Type</th>
+        <th>DAX Data Type</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Whole number</td>
+        <td>64-bit integer</td>
+        <td>-263 through 263-1</td>
+    </tr>
+    <tr>
+        <td>Decimal number</td>
+        <td>64-bit real</td>
+        <td>Negative: -1.79 x 10<sup>308</sup> through -2.23 x 10<sup>-308</sup> - zero (0) - positive: 2.23 x 10<sup>-308</sup> through 1.79 x 10<sup>308</sup> - Limited to 17 decimal digits</td>
+    </tr>
+    <tr>
+        <td>Boolean</td>
+        <td>Boolean</td>
+        <td>TRUE or FALSE</td>
+    </tr>
+    <tr>
+        <td>Text</td>
+        <td>String</td>
+        <td>Unicode character string</td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>Date/time</td>
+        <td>Valid dates are all dates after January 1, 1900</td>
+    </tr>
+    <tr>
+        <td>Currency</td>
+        <td>Currency</td>
+        <td>-9.22 x 10<sup>14</sup> through 9.22 x 10<sup>14</sup> - limited to four decimal digits of fixed precision</td>
+    </tr>
+    <tr>
+        <td>N/A</td>
+        <td>BLANK</td>
+        <td>In some cases, it's the equivalent of a database (SQL) NULL</td>
+    </tr>
+</table>
+
+<p>| 💡 Tip: BLANK Data Type  <br> <ul> 1. DAX uses BLANK for both database NULL and for blank cells in Excel. <br>   2. BLANK doesn't mean zero. Two DAX functions are related to the BLANK data type: the BLANK DAX function returns BLANK, while the ISBLANK DAX function tests whether an expression evaluates to BLANK. </ul>|</p>
+
+<hr>
+
+<h2><img src="https://drive.google.com/uc?export=download&id=12VWb9dFYI3mGJ0MH2xWP5bL3IR-3pHeg" width="21"> Work with DAX functions</h2>
+
+<p>|💡 Tip: A function argument is optional when documentation shows it enclosed within square brackets.|</p>
+
+<p>Many functions exist that you won't find in Excel because they're specific to data modeling:</p>
+
+<ul>
+    <li>Relationship navigation functions</li>
+    <li>Filter context modification functions</li>
+    <li>Iterator functions</li>
+    <li>Time intelligence functions</li>
+    <li>Path functions</li>
+</ul>
+
+<p>|💡 Tip: To search for documentation that is related to a <a href="https://docs.microsoft.com/en-us/dax/countrows-function-dax">DAX functions</a>, in a web search, enter the keyword DAX followed by the function name.|</p>
+
+<h3><p>Functions that originate from Excel</p></h3>
+
+<p>The IF DAX function tests whether a condition that's provided as the first argument is met. It returns one value if the condition is TRUE and returns the other value if the condition is FALSE. If logical_test evaluates to FALSE and value_if_false isn't provided, the function will return BLANK.</p>
+
+<p>The function's syntax is:</p>
+
+<pre>
+<code>IF(&lt;logical_test&gt;, &lt;value_if_true&gt;[, &lt;value_if_false&gt;])</code>
+</pre>
+
+<h3>
+</body>
+</html>
