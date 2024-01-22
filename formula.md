@@ -12,8 +12,8 @@
 <h2><img src="https://drive.google.com/uc?export=download&id=1H_9MUHK9xMPUTtsVY8mjDs9lcVDIgyBU" width="22"> DAX formulas</h2>
 
 
-SUMX = Returns the sum of an expression evaluated for each row in a table.
-SUM = Adds all the numbers in a column.
+&#9654; SUMX = Returns the sum of an expression evaluated for each row in a table. <br>
+&#9654; SUM = Adds all the numbers in a column.
 
 
 ```
