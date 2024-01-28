@@ -27,6 +27,39 @@ SUMX & SUM Return value: A decimal number
 ------------------------------------------------------------------------------------------------------
 
 
+<h2><img src="https://drive.google.com/uc?export=download&id=1H_9MUHK9xMPUTtsVY8mjDs9lcVDIgyBU" width="22">Role-playing dimension</h2>
+
+
+The expression calculates the total sales for August based on the shipping date.
+<ul>
+<b>SUM</b> - calculates the total Sales column from the Sales table<br>
+<b>FILTER</b> - filters the values for August from the Month column of the Date table<br>
+<b>USERELATIONSHIP</b> - overrides the table relationship to consider the shipping date instead of the order date, which is the default relationship.<br>
+</ul>
+
+&#9654; working with pre-established inactive  relations.
+
+```
+Syntax:
+USERELATIONSHIP(<columnName1>,<columnName2>)
+
+eg.
+August Sales by Shipping date =
+CALCULATE 
+(
+    SUM ( Sales[Sales Amount] ),
+    FILTER ( 'Date', 'Date'[Month] = "August" ),
+    USERELATIONSHIP ( Sales[Shipping Date], 'Date'[Date] )
+)
+
+```
+
+Return value: The function returns no value; the function only enables the indicated relationship for the duration of the calculation.
+
+------------------------------------------------------------------------------------------------------
+
+
+
 
 <b>
 &#8226; is the HTML entity for a bullet point.<br>
