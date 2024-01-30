@@ -29,7 +29,7 @@ SUMX & SUM Return value: A decimal number
 
 <h2><img src="https://drive.google.com/uc?export=download&id=1H_9MUHK9xMPUTtsVY8mjDs9lcVDIgyBU" width="22">Role-playing dimension</h2>
 
-
+<h3>USERELATIONSHIP</h3>
 The expression calculates the total sales for August based on the shipping date.
 <ul>
 <b>SUM</b> - calculates the total Sales column from the Sales table<br>
@@ -58,23 +58,35 @@ Return value: The function returns no value; the function only enables the indic
 
 ------------------------------------------------------------------------------------------------------
 
-<h2><img src="https://drive.google.com/uc?export=download&id=1H_9MUHK9xMPUTtsVY8mjDs9lcVDIgyBU" width="22"> DAX formulas</h2>
+<h2><img src="https://drive.google.com/uc?export=download&id=1H_9MUHK9xMPUTtsVY8mjDs9lcVDIgyBU" width="22">Time-related dimension</h2>
 
+<h3>SAMEPERIODLASTYEAR</h3>
+&#9654; SAMEPERIODLASTYEAR = Returns a table that contains a column of dates shifted one year back in time from the dates in the specified dates column, in the current context. <br>
 
-&#9654; SUMX = Returns the sum of an expression evaluated for each row in a table. <br>
-&#9654; SUM = Adds all the numbers in a column.
+```
 
+Syntax:
+SAMEPERIODLASTYEAR(<dates>)  
 
-'''
-
+Example:
 TOTALYTD(<expression>,<dates>[,<filter>][,<year_end_date>])
 
-'''
+```
+
+Return value: A single-column table of date values.
 
 
-
-
+Remarks: The dates argument can be any of the following:
+<ul>
+&#8226; A reference to a date/time column, <br>
+&#8226; A table expression that returns a single column of date/time values,<br>
+&#8226; A Boolean expression that defines a single-column table of date/time values.<br>
+&#8226; Constraints on Boolean expressions are described in the topic, CALCULATE.<br>
+&#8226; The dates returned are the same as the dates returned by this equivalent formula: DATEADD(dates, -1, year)<br>
+&#8226; This function is not supported for use in DirectQuery mode when used in calculated columns or row-level security (RLS) rules.<br>
+</ul>
 ------------------------------------------------------------------------------------------------------
+
 
 <b>
 &#8226; is the HTML entity for a bullet point.<br>
