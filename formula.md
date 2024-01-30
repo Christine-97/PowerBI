@@ -58,8 +58,23 @@ Return value: The function returns no value; the function only enables the indic
 
 ------------------------------------------------------------------------------------------------------
 
+<h2><img src="https://drive.google.com/uc?export=download&id=1H_9MUHK9xMPUTtsVY8mjDs9lcVDIgyBU" width="22"> DAX formulas</h2>
 
 
+&#9654; SUMX = Returns the sum of an expression evaluated for each row in a table. <br>
+&#9654; SUM = Adds all the numbers in a column.
+
+
+'''
+
+TOTALYTD(<expression>,<dates>[,<filter>][,<year_end_date>])
+
+'''
+
+
+
+
+------------------------------------------------------------------------------------------------------
 
 <b>
 &#8226; is the HTML entity for a bullet point.<br>
