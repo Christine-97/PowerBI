@@ -49,7 +49,7 @@ CALCULATE
 (
     SUM ( Sales[Sales Amount] ),
     FILTER ( 'Date', 'Date'[Month] = "August" ),
-    USERELATIONSHIP ( Sales[Shipping Date], 'Date'[Date] )
+    USERELATIONSHIP ( Sales[Shipping Date].[Date] )
 )
 
 ```
@@ -59,6 +59,18 @@ Return value: The function returns no value; the function only enables the indic
 ------------------------------------------------------------------------------------------------------
 
 <h2><img src="https://drive.google.com/uc?export=download&id=1H_9MUHK9xMPUTtsVY8mjDs9lcVDIgyBU" width="22">Time-related dimension</h2>
+
+
+
+<p>Time intelligence functions are a crucial element of data analysis. They can be used to perform calculations over different periods. They are particularly useful for trend analysis, forecasting, and performance comparison. Some of the most crucial functions that provide time intelligence output can be classified as follows: </p>
+
+<ul>
+&#8226; Time comparison functions: These functions compare one date or time to another. For instance, comparing total revenue with the revenue from the last quarter. </br>
+&#8226; Aggregate functions: Aggregations show the year-to-date, month-to-date or anything similar. </br>
+&#8226; Information functions: These provide snapshots of information, like a month-opening or year-end balance. These functions are especially important in financial management.</br>
+
+</ul>
+
 
 <h3>SAMEPERIODLASTYEAR</h3>
 &#9654; SAMEPERIODLASTYEAR = Returns a table that contains a column of dates shifted one year back in time from the dates in the specified dates column, in the current context. <br>
@@ -85,7 +97,38 @@ Remarks: The dates argument can be any of the following:
 &#8226; The dates returned are the same as the dates returned by this equivalent formula: DATEADD(dates, -1, year)<br>
 &#8226; This function is not supported for use in DirectQuery mode when used in calculated columns or row-level security (RLS) rules.<br>
 </ul>
-------------------------------------------------------------------------------------------------------
+
+
+<h3>DATEADD</h3>
+
+&#9654; DATEADD = Returns a table that contains a column of dates, shifted either forward or backward in time by the specified number of intervals from the dates in the current context. <br>
+
+```
+Syntax:
+DATEADD(<dates>,<number_of_intervals>,<interval>)
+
+Example:
+DATEADD(DateTime[DateKey],-1,year)
+
+```
+
+Return value: A single-column table of date values.
+
+Remarks: The dates argument can be any of the following:
+
+<ul>
+&#8226; A reference to a date/time column,<br>
+&#8226; A table expression that returns a single column of date/time values,<br>
+&#8226; A Boolean expression that defines a single-column table of date/time values.<br>
+&#8226; If the number specified for number_of_intervals is positive, the dates in dates are moved forward in time; if the number is negative, the dates in dates are shifted back in time.<br>
+&#8226; The interval parameter is an enumeration, not a set of strings; therefore values should not be enclosed in quotation marks. Also, the values: year, quarter, month, day should be spelled in full when using them.<br>
+&#8226; The result table includes only dates that exist in the dates column.<br>
+&#8226; If the dates in the current context do not form a contiguous interval, the function returns an error.<br>
+&#8226; This function is not supported for use in DirectQuery mode when used in calculated columns or row-level security (RLS) rules.<br>
+</ul>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+
 
 
 <b>
