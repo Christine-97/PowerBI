@@ -126,6 +126,12 @@ Remarks: The dates argument can be any of the following:
 &#8226; If the dates in the current context do not form a contiguous interval, the function returns an error.<br>
 &#8226; This function is not supported for use in DirectQuery mode when used in calculated columns or row-level security (RLS) rules.<br>
 </ul>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+Creating hierarchy
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 <br>
 
