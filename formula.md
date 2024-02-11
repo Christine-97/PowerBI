@@ -132,6 +132,15 @@ Remarks: The dates argument can be any of the following:
 
 Creating hierarchy
 
+
+
+
+
+
+
+<h3>NOTES</h3>
+
+After using delimiter option in data transform, always use TRIM from format options (all in power query > TRANSFORM TAB)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 <br>
 
