@@ -133,10 +133,18 @@ Remarks: The dates argument can be any of the following:
 Creating hierarchy
 
 
+<h3>CALENDARAUTO Function</h3>
 
+```
+Tablename = CALENDARAUTO([fiscal_year_end_month])  
 
+Example
+In this example, the MinDate and MaxDate in the data model are July 1, 2010 and June 30, 2011.
 
+CALENDARAUTO() will return all dates between January 1, 2010 and December 31, 2011.
 
+CALENDARAUTO(3) will return all dates between April 1, 2010 and March 31, 2012.
+```
 
 <h3>NOTES</h3>
 
