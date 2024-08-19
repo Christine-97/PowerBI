@@ -1,40 +1,3 @@
-To paste the study plan with the exact formatting, you can use the following methods depending on where you're pasting it:
-
-### **For Microsoft Word or Google Docs**
-
-1. **Copy the Table:**
-   - Highlight the entire table in the text above.
-   - Right-click and select “Copy” or use `Ctrl + C` (Windows) / `Cmd + C` (Mac).
-
-2. **Paste in Word or Google Docs:**
-   - Open Microsoft Word or Google Docs.
-   - Place your cursor where you want to insert the table.
-   - Right-click and select “Paste” or use `Ctrl + V` (Windows) / `Cmd + V` (Mac).
-
-3. **Adjust Formatting:**
-   - In Word: Use the “Table Tools” options to adjust the design if needed.
-   - In Google Docs: Click on the table and use the options in the toolbar to adjust formatting.
-
-### **For Excel or Google Sheets**
-
-1. **Copy the Table:**
-   - Highlight the entire table in the text above.
-   - Right-click and select “Copy” or use `Ctrl + C` (Windows) / `Cmd + C` (Mac).
-
-2. **Paste in Excel or Google Sheets:**
-   - Open Excel or Google Sheets.
-   - Place your cursor where you want to insert the table.
-   - Right-click and select “Paste” or use `Ctrl + V` (Windows) / `Cmd + V` (Mac).
-
-3. **Adjust Formatting:**
-   - In Excel: Use the “Table Tools” options to format cells, borders, and text alignment.
-   - In Google Sheets: Click on the table and use the toolbar to adjust formatting.
-
-### **For Markdown Editors**
-
-If you’re using a Markdown editor, you’ll need to convert the table to Markdown format manually. Here’s how the tables will look in Markdown:
-
-```markdown
 ### Study Plan for Power BI PL-300 Certification Exam
 
 #### Week 1
@@ -99,4 +62,5 @@ If you’re using a Markdown editor, you’ll need to convert the table to Markd
 - [Microsoft Power BI Documentation](https://docs.microsoft.com/en-us/power-bi/)
 - [Practice Quizzes](https://www.exam-labs.com/)
 
-**Motivational Note:
+**Motivational Note:**
+"Success is the sum of small efforts, repeated day in and day out." – Robert Collier
