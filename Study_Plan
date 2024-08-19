@@ -1,0 +1,102 @@
+To paste the study plan with the exact formatting, you can use the following methods depending on where you're pasting it:
+
+### **For Microsoft Word or Google Docs**
+
+1. **Copy the Table:**
+   - Highlight the entire table in the text above.
+   - Right-click and select “Copy” or use `Ctrl + C` (Windows) / `Cmd + C` (Mac).
+
+2. **Paste in Word or Google Docs:**
+   - Open Microsoft Word or Google Docs.
+   - Place your cursor where you want to insert the table.
+   - Right-click and select “Paste” or use `Ctrl + V` (Windows) / `Cmd + V` (Mac).
+
+3. **Adjust Formatting:**
+   - In Word: Use the “Table Tools” options to adjust the design if needed.
+   - In Google Docs: Click on the table and use the options in the toolbar to adjust formatting.
+
+### **For Excel or Google Sheets**
+
+1. **Copy the Table:**
+   - Highlight the entire table in the text above.
+   - Right-click and select “Copy” or use `Ctrl + C` (Windows) / `Cmd + C` (Mac).
+
+2. **Paste in Excel or Google Sheets:**
+   - Open Excel or Google Sheets.
+   - Place your cursor where you want to insert the table.
+   - Right-click and select “Paste” or use `Ctrl + V` (Windows) / `Cmd + V` (Mac).
+
+3. **Adjust Formatting:**
+   - In Excel: Use the “Table Tools” options to format cells, borders, and text alignment.
+   - In Google Sheets: Click on the table and use the toolbar to adjust formatting.
+
+### **For Markdown Editors**
+
+If you’re using a Markdown editor, you’ll need to convert the table to Markdown format manually. Here’s how the tables will look in Markdown:
+
+```markdown
+### Study Plan for Power BI PL-300 Certification Exam
+
+#### Week 1
+
+| **Date** | **Time** | **Content** | **Duration** | **Task** | **Objective** | **Key Takeaways** |
+|----------|----------|-------------|--------------|----------|---------------|-------------------|
+| Aug 21   | 1.5 hours| Introduction and Basic Visualizations | 17:07        | Watch videos, take notes | Understand basic visualization setup | Introduction to Power BI Desktop |
+| Aug 22   | 1.5 hours| Exploring Power BI Desktop | 18:43        | Practice in Power BI Desktop | Explore various views in Power BI | Report and Data views, Focus Mode |
+| Aug 23   | 1.5 hours| Formatting Visualizations | 22:11        | Apply formatting techniques to visuals | Learn formatting options | Formatting visual elements |
+| Aug 24   | 1.5 hours| Practice Activities: Activity 1 & 2 | 16:23        | Complete practice activities | Reinforce learning through practice | Hands-on practice |
+| Aug 25   | 1.5 hours| Advanced Visualization | 26:42        | Implement advanced visualizations | Master advanced visualizations | Matrix, Bar, and Line Charts |
+| Aug 26   | 1.5 hours| Filters and Slicers | 36:11        | Set up and configure filters and slicers | Learn to control data display | Filters, Slicers, Advanced Filtering |
+| Aug 27   | 1.5 hours| Practice Activities: Activity 3 & 4 | 17:22        | Complete practice activities | Apply knowledge gained | Hands-on practice |
+
+#### Week 2
+
+| **Date** | **Time** | **Content** | **Duration** | **Task** | **Objective** | **Key Takeaways** |
+|----------|----------|-------------|--------------|----------|---------------|-------------------|
+| Aug 28   | 1.5 hours| Additional Visualizations | 23:04        | Create and format additional visualizations | Explore additional visual options | Ribbon, Waterfall, Scatter Charts |
+| Aug 29   | 1.5 hours| Maps and Custom Visualizations | 22:32        | Configure and format maps | Learn to use and format maps | Maps and Custom Visualizations |
+| Aug 30   | 1.5 hours| Gauges, Cards, KPIs | 24:02        | Set up KPIs, gauges, and conditional formatting | Understand advanced visual elements | KPIs, Gauges, Conditional Formatting |
+| Aug 31   | 1.5 hours| Practice Activities: Activity 5 & 6 | 19:25        | Complete practice activities | Apply advanced visualization techniques | Hands-on practice |
+| Sep 1    | 1.5 hours| Additional Visualization Techniques | 38:38        | Implement advanced visualization controls | Master advanced features and interactions | Advanced Visualization Controls |
+| Sep 2    | 1.5 hours| Practice Activities: Activity 7 & 8 | 17:32        | Complete practice activities | Reinforce learning through practice | Hands-on practice |
+| Sep 3    | 1.5 hours| **Reflection** | 30:00        | Review of Part 1 and Practice Test | Assess progress and understanding | Review Part 1 Content |
+
+#### Week 3
+
+| **Date** | **Time** | **Content** | **Duration** | **Task** | **Objective** | **Key Takeaways** |
+|----------|----------|-------------|--------------|----------|---------------|-------------------|
+| Sep 4    | 1.5 hours| Introduction and Power Query Editor | 19:25        | Explore Power Query Editor | Learn basic data transformation tools | Power Query Interface |
+| Sep 5    | 1.5 hours| Transform Activities | 22:14        | Perform data transformations | Master data transformation techniques | Data Transformation |
+| Sep 6    | 1.5 hours| Advanced Transformations | 21:33        | Apply advanced transformations | Implement advanced data transformations | Pivot and Unpivot Data |
+| Sep 7    | 1.5 hours| Practice Activities: Activity 9 & 10 | 17:45        | Complete practice activities | Reinforce learning through practice | Hands-on practice |
+| Sep 8    | 1.5 hours| Working with Dates and Time | 24:40        | Create and format date and time columns | Learn date and time transformations | Date and Time Functions |
+| Sep 9    | 1.5 hours| Practice Activities: Activity 11 & 12 | 16:28        | Complete practice activities | Apply date and time functions | Hands-on practice |
+| Sep 10   | 1.5 hours| **Reflection** | 30:00        | Review of Part 2 and Practice Test | Assess progress and understanding | Review Part 2 Content |
+
+#### Week 4
+
+| **Date** | **Time** | **Content** | **Duration** | **Task** | **Objective** | **Key Takeaways** |
+|----------|----------|-------------|--------------|----------|---------------|-------------------|
+| Sep 11   | 1.5 hours| Data Modeling and DAX Introduction | 22:40        | Build data models and relationships | Learn data modeling and DAX basics | Data Modeling and Relationships |
+| Sep 12   | 1.5 hours| Basic DAX Functions | 25:00        | Practice basic DAX functions | Master basic DAX functions | Calculated Columns and Measures |
+| Sep 13   | 1.5 hours| Advanced DAX Functions | 22:14        | Implement advanced DAX functions | Apply advanced DAX functions | Advanced DAX Functions |
+| Sep 14   | 1.5 hours| Practice Activities: Activity 17 & 18 | 20:58        | Complete practice activities | Reinforce learning through practice | Hands-on practice |
+| Sep 15   | 1.5 hours| Power BI Service Overview | 26:28        | Explore Power BI Service features | Understand Power BI Service terminology | Power BI Service Features |
+| Sep 16   | 1.5 hours| Power BI Service: Row-Level Security | 24:50        | Set up Row-Level Security and manage data | Implement data security and management | Row-Level Security and Data Management |
+| Sep 17   | 1.5 hours| **Reflection** | 30:00        | Review of Part 3 and Practice Test | Assess progress and understanding | Review Part 3 Content |
+
+#### Final Review
+
+| **Date** | **Time** | **Content** | **Duration** | **Task** | **Objective** | **Key Takeaways** |
+|----------|----------|-------------|--------------|----------|---------------|-------------------|
+| Sep 18   | 2 hours  | Comprehensive Review of All Parts | 60:00        | Review all topics | Consolidate knowledge and review key concepts | Full Review |
+| Sep 19   | 2 hours  | Practice Test 1 | 60:00        | Take Practice Test 1 | Assess understanding of Visualizations and Power Query | Practice Test 1 |
+| Sep 20   | 2 hours  | Practice Test 2 | 60:00        | Take Practice Test 2 | Assess understanding of DAX Functions, Modeling, and Power BI Service | Practice Test 2 |
+| Sep 21   | 2 hours  | **Final Reflection** | 60:00        | Review incorrect answers and key concepts | Final review and clarify doubts | Final Review and Adjustment |
+
+**Additional Resources:**
+- [Power BI Community Forums](https://community.powerbi.com/)
+- [Microsoft Power BI Documentation](https://docs.microsoft.com/en-us/power-bi/)
+- [Practice Quizzes](https://www.exam-labs.com/)
+
+**Motivational Note:
