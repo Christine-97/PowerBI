@@ -1,7 +1,7 @@
 # Power Over Filters
 ## The ultimate cheat sheet to control filters
 
-
+[![Read on Medium](https://img.shields.io/badge/Read%20on-Medium-02B875?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@christine_polly_paul/most-power-bi-users-never-realize-filters-arent-final-here-s-the-proof-8cdde0fd6ff0)
 
 Sample Dataset
 
